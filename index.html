@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Konfiguration</title>
+</head>
+<body>
+    <div id="title">
+        <h1>Formen-Rechner</h1>
+    </div>
+    <div>
+        <div>
+            <h4>Wuerfel</h4>
+            <form>
+                <div>
+                    <lable for="length">Seitenlaenge: </lable>
+                    <input type="number" id="length" name="length" min="0.1">
+                </div>
+                <div>
+                    <input name="diceFloor" type="submit" value="Grundflaeche berechnen">
+                    <input name="diceSurface" type="submit" value="Oberflaeche berechnen">
+                    <input name="diceVolume" type="submit" value="Volumen berechnen">
+                    <input name="diceAll" type="submit" value="Alles berechnen">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h4>Quader</h4>
+            <form>
+                <div>
+                    <lable for="length">Laenge: </lable>
+                    <input type="number" id="length" name="length" min="0.1">
+                </div>
+                <div>
+                    <lable for="width">Breite: </lable>
+                    <input type="number" id="width" name="width" min="0.1">
+                </div>
+                <div>
+                    <lable for="height">Hoehe: </lable>
+                    <input type="number" id="height" name="height" min="0.1">
+                </div>
+                <div>
+                    <input name="cuboidFloor" type="submit" value="Grundflaeche berechnen">
+                    <input name="cuboidSurface" type="submit" value="Oberflaeche berechnen">
+                    <input name="cuboidVolume" type="submit" value="Volumen berechnen">
+                    <input name="cuboidAll" type="submit" value="Alles berechnen">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h4>Kugel</h4>
+            <form>
+                <div>
+                    <lable for="radius">Radius: </lable>
+                    <input type="number" id="radius" name="radius" min="0.1">
+                </div>
+                <div>
+                    <input name="globeFloor" type="submit" value="Querschnittsflaeche berechnen">
+                    <input name="globeSurface" type="submit" value="Oberflaeche berechnen">
+                    <input name="globeVolume" type="submit" value="Volumen berechnen">
+                    <input name="globeAll" type="submit" value="Alles berechnen">
+                </div>
+            </form>
+        </div>
+        <div>
+            <h4>Pyramide, vierseitig</h4>
+            <form>
+                <div>
+                    <lable for="length">Laenge: </lable>
+                    <input type="number" id="length" name="length" min="0.1">
+                </div>
+                <div>
+                    <lable for="width">Breite: </lable>
+                    <input type="number" id="width" name="width" min="0.1">
+                </div>
+                <div>
+                    <lable for="height">Hoehe: </lable>
+                    <input type="number" id="height" name="height" min="0.1">
+                </div>
+                <div>
+                    <input name="pyramide4Floor" type="submit" value="Grundflaeche berechnen">
+                    <input name="pyramide4Surface" type="submit" value="Oberflaeche berechnen">
+                    <input name="pyramide4Volume" type="submit" value="Volumen berechnen">
+                    <input name="pyramide4All" type="submit" value="Alles berechnen">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
