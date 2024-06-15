@@ -30,7 +30,30 @@ class TestsFigure {
 		figure.roundVolumeResult();
 		
 		assertEquals(98.54, figure.volumeResult);
+	}
+
+	@Test
+	void testGiveFloorResult() {
+		Figure figure = new Globe (7.4736); 
+		figure.giveFloorResult(figure.radius, figure.pi);
 		
+		assertEquals(46.95,figure.floorResult, 0.01);
+	}
+	
+	@Test
+	void testGiveSurfaceResult() {
+		Figure figure = new Pyramide4 (4.56, 3.2344, 20.56);
+		figure.giveSurfaceResult(figure.length, figure.width, figure.height);
+		
+		assertEquals(175.69,figure.surfaceResult, 0.01);
+	}
+	
+	@Test
+	void testGiveVolumeResult() {
+		Figure figure = new Dice(5.789);
+		figure.giveVolumeResult(figure.length, figure.width, figure.height);
+		
+		assertEquals(194.00, figure.volumeResult, 0.01);
 	}
 
 }
