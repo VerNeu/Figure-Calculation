@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class TestsVolume {
 
 	@Test
-	void testCalculateVolumeCube() {
+	void testCalculateVolumeCube() throws Exception {
 		VolumeCalculation vcc = new VolumeCalculationCube();
 		double result = vcc.calculateVolume(5.67,7.333,8.5);
 		
@@ -15,7 +15,7 @@ class TestsVolume {
 	}
 	
 	@Test
-	void testCalculateVolumeGlobe() {
+	void testCalculateVolumeGlobe() throws Exception {
 		VolumeCalculation vcg = new VolumeCalculationGlobe();
 		double pi = Math.PI;
 		double dummy = 1;
@@ -25,7 +25,7 @@ class TestsVolume {
 	}
 	
 	@Test
-	void testCalculateVolumePyramide4() {
+	void testCalculateVolumePyramide4() throws Exception {
 		VolumeCalculation vcp4 = new VolumeCalculationPyramide4();
 		double result = vcp4.calculateVolume(2.678, 5.432, 7.5);
 		
