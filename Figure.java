@@ -13,6 +13,7 @@ public abstract class Figure {
 	protected double radius;
 	protected double pi = Math.PI;
 	protected double dummy = 1;
+	protected double roundingScale = Math.pow(10, 2);
 	
 	protected double floorResult;
 	protected double surfaceResult;
@@ -25,49 +26,39 @@ public abstract class Figure {
 	public Figure() {}
 	
 	public void roundFloorResult () {
-		double scale = Math.pow(10, 2);
-		floorResult = Math.floor(floorResult * scale) / scale;
+		floorResult = Math.floor(floorResult * roundingScale) / roundingScale;
 	}
 	
 	public void roundSurfaceResult () {
-		double scale = Math.pow(10, 2);
-		surfaceResult = Math.floor(surfaceResult * scale) / scale;
+		surfaceResult = Math.floor(surfaceResult * roundingScale) / roundingScale;
 	}
 	
 	public void roundVolumeResult () {
-		double scale = Math.pow(10, 2);
-		volumeResult = Math.floor(volumeResult * scale) / scale;
+		volumeResult = Math.floor(volumeResult * roundingScale) / roundingScale;
 	}
 
 	public void giveFloorResult(double length_radius, double width_pi) {
 		floorResult = floorCalculation.calculateFloor(length_radius, width_pi);
 		roundFloorResult ();
-		System.out.println(floorResult);
 	}
 	
 	public void giveSurfaceResult(double length_radius, double width_pi, double height_dummy) {
 		surfaceResult = surfaceCalculation.calculateSurface(length_radius, width_pi, height_dummy);
 		roundSurfaceResult ();
-		System.out.println(surfaceResult);	
 	}
 	
 	public void giveVolumeResult(double length_radius, double width_pi, double height_dummy) {
 		volumeResult = volumeCalculation.calculateVolume(length_radius, width_pi, height_dummy);
-		roundVolumeResult ();
-		System.out.println(volumeResult);		
+		roundVolumeResult ();		
 	}
 	
 	public void giveAllResults(double length_radius, double width_pi, double height_dummy) {
+		giveFloorResult(length_radius, width_pi);
+		giveSurfaceResult(length_radius, width_pi, height_dummy);
+		giveVolumeResult(length_radius, width_pi, height_dummy);
 		
-		floorResult = floorCalculation.calculateFloor(length_radius, width_pi);
-		roundFloorResult ();
-		surfaceResult = surfaceCalculation.calculateSurface(length_radius, width_pi, height_dummy);
-		roundSurfaceResult ();
-		volumeResult = volumeCalculation.calculateVolume(length_radius, width_pi, height_dummy);
-		roundVolumeResult ();
-		System.out.println(floorResult);
+		/*System.out.println(floorResult);
 		System.out.println(surfaceResult);
-		System.out.println(volumeResult);
+		System.out.println(volumeResult);*/
 	}
-	
 }
